@@ -117,8 +117,7 @@ under the License.
             <property name="severity" value="error"/>
             <property name="option" value="bottom"/>
             <property name="groups"
-                      value="com.shixiaogang.casper,com.shixiaogang.casper.shaded,*,
-                      javax,java,scala"/>
+                      value="com.shixiaogang.casper,*,java,scala"/>
             <property name="separated" value="true"/>
             <property name="sortStaticImportsAlphabetically" value="true"/>
             <message key="import.ordering"
