@@ -59,6 +59,7 @@ under the License.
     </properties>
 
     <modules>
+        <module>casper-common</module>
         <module>casper-io</module>
     </modules>
 
