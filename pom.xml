@@ -60,7 +60,6 @@ under the License.
 
     <modules>
         <module>casper-common</module>
-        <module>casper-io</module>
     </modules>
 
     <dependencyManagement>

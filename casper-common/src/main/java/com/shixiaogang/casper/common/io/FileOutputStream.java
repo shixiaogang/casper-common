@@ -16,31 +16,35 @@
  * limitations under the License.
  */
 
-package com.shixiaogang.casper.io;
+package com.shixiaogang.casper.common.io;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
- * An extension to {@link InputStream} which allows the retrieving and seeking
- * of the current position.
+ * Interface for an output stream written to a file.
  */
-public abstract class PositionedInputStream extends InputStream {
+public abstract class FileOutputStream extends PositionedOutputStream {
 
     /**
-     * Returns the current position in the stream.
+     * Flushes the stream, writing any buffered data to the underlying storage.
      *
-     * @return The current position in the stream.
+     * <p>After the method has been called, the stream must not hold any
+     * buffered data any more. But it does not necessarily mean that the data
+     * is persistent. Data is completely persistent only when the calling to
+     * {@link #sync()} and {@link #close()} successfully completes.</p>
+     *
      * @throws IOException Thrown if an I/O error occurs.
      */
-    public abstract long getPosition() throws IOException;
+    public abstract void flush() throws IOException;
 
     /**
-     * Seeks to the given position. The read operation called next will start
-     * from that position.
+     * Flushes the stream, persisting all data to the underlying storage.
      *
-     * @param targetPosition The new position where the reading starts.
+     * <p>After the method has been called, all data must have been persistent
+     * on the devices.</p>
+     *
      * @throws IOException Thrown if an I/O error occurs.
      */
-    public abstract void seek(long targetPosition) throws IOException;
+    public abstract void sync() throws IOException;
+
 }

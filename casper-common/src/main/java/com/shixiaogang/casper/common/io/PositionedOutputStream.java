@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.shixiaogang.casper.io;
+package com.shixiaogang.casper.common.io;
 
 import java.io.IOException;
 import java.io.OutputStream;
