@@ -23,7 +23,7 @@ package com.shixiaogang.casper.common.types;
  *
  * <p>A string value stores strings of variable unlimited length.</p>
  */
-public final class StringType implements DataType {
+public final class StringType implements SimpleDataType<String> {
 
     private static final long serialVersionUID = 1L;
 

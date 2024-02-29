@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for double values.
  */
-public final class DoubleType implements DataType {
+public final class DoubleType implements SimpleDataType<Double> {
 
     private static final long serialVersionUID = 1L;
 

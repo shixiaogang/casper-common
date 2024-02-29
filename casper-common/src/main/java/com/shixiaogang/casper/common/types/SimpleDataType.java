@@ -19,34 +19,9 @@
 package com.shixiaogang.casper.common.types;
 
 /**
- * The data type for character values.
+ * Interfaces for simple data types.
  *
- * <p>Char values are mainly used to store text data. Different from byte values
- * which are raw data, we need character encoding to process char values.</p>
+ * @param <T> The java type corresponding to the data type.
  */
-public final class CharType implements SimpleDataType<Character> {
-
-    private static final long serialVersionUID = 1L;
-
-    CharType() {
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        return o != null && getClass() == o.getClass();
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return getClass().getSimpleName();
-    }
+public interface SimpleDataType<T> extends DataType {
 }

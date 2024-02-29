@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for integer values.
  */
-public final class IntType implements DataType {
+public final class IntType implements SimpleDataType<Integer> {
 
     private static final long serialVersionUID = 1L;
 

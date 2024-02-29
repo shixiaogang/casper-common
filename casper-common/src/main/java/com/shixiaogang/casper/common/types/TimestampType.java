@@ -18,6 +18,8 @@
 
 package com.shixiaogang.casper.common.types;
 
+import java.time.Instant;
+
 /**
  * The data type for timestamp values without a time zone.
  *
@@ -28,7 +30,7 @@ package com.shixiaogang.casper.common.types;
  * {@code 9999-12-31 23:59:59.999}. Leap seconds (e.g., 0000-01-01 23:59:60) are
  * not supported.</p>
  */
-public final class TimestampType implements DataType {
+public final class TimestampType implements SimpleDataType<Instant> {
 
     private static final long serialVersionUID = 1L;
 

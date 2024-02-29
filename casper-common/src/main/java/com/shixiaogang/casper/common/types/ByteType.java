@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for byte values.
  */
-public final class ByteType implements DataType {
+public final class ByteType implements SimpleDataType<Byte> {
 
     private static final long serialVersionUID = 1L;
 

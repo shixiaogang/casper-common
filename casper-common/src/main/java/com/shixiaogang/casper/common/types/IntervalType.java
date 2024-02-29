@@ -18,10 +18,12 @@
 
 package com.shixiaogang.casper.common.types;
 
+import java.time.Duration;
+
 /**
  * The data type for interval values.
  */
-public final class IntervalType implements DataType {
+public final class IntervalType implements SimpleDataType<Duration> {
 
     private static final long serialVersionUID = 1L;
 

@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for long values.
  */
-public final class LongType implements DataType {
+public final class LongType implements SimpleDataType<Long> {
 
     private static final long serialVersionUID = 1L;
 

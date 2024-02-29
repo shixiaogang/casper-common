@@ -22,13 +22,15 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+
 /**
  * The data type for decimal values with fixed precision and scale.
  */
 @Getter
 @EqualsAndHashCode
 @ToString
-public final class DecimalType implements DataType {
+public final class DecimalType implements SimpleDataType<BigDecimal> {
 
     private static final long serialVersionUID = 1L;
 

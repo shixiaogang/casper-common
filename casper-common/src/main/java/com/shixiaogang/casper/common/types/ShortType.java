@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for short values.
  */
-public final class ShortType implements DataType {
+public final class ShortType implements SimpleDataType<Short> {
 
     private static final long serialVersionUID = 1L;
 

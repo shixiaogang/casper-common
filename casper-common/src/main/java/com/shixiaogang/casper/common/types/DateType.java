@@ -18,12 +18,14 @@
 
 package com.shixiaogang.casper.common.types;
 
+import java.time.Instant;
+
 /**
  * The data type for date values.
  *
  * <p>The date values ranges from {@code 0000-01-01} to {@code 9999-12-31}.</p>
  */
-public final class DateType implements DataType {
+public final class DateType implements SimpleDataType<Instant> {
 
     private static final long serialVersionUID = 1L;
 

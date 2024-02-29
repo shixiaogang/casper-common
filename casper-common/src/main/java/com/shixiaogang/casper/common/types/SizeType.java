@@ -18,10 +18,12 @@
 
 package com.shixiaogang.casper.common.types;
 
+import com.shixiaogang.casper.common.io.Size;
+
 /**
  * The data type for size values.
  */
-public final class SizeType implements DataType {
+public final class SizeType implements SimpleDataType<Size> {
 
     private static final long serialVersionUID = 1L;
 

@@ -21,7 +21,7 @@ package com.shixiaogang.casper.common.types;
 /**
  * The data type for float values.
  */
-public final class FloatType implements DataType {
+public final class FloatType implements SimpleDataType<Float> {
 
     private static final long serialVersionUID = 1L;
 
