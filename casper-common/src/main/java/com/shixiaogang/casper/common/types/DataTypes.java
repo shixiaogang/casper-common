@@ -46,6 +46,10 @@ public class DataTypes {
         return new DecimalType(precision, scale);
     }
 
+    public static <T> EnumType<T> ENUM(Class<T> clazz) {
+        return new EnumType<>(clazz);
+    }
+
     public static ArrayType ARRAY(DataType elementType, int length) {
         return new ArrayType(elementType, length);
     }
