@@ -50,12 +50,8 @@ public class DataTypes {
         return new EnumType<>(clazz);
     }
 
-    public static ArrayType ARRAY(DataType elementType, int length) {
-        return new ArrayType(elementType, length);
-    }
-
-    public static ListType LIST(DataType elementType) {
-        return new ListType(elementType);
+    public static ArrayType ARRAY(DataType elementType) {
+        return new ArrayType(elementType);
     }
 
     public static MapType MAP(DataType keyType, DataType valueType) {

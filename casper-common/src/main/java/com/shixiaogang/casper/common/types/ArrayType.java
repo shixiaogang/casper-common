@@ -23,9 +23,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * The data type for fixed-length collections.
- *
- * <p>Different from lists, the length of arrays is fixed.</p>
+ * The data type for arrays.
  */
 @Getter
 @EqualsAndHashCode
@@ -37,11 +35,7 @@ public final class ArrayType implements DataType {
     // The type of the array elements.
     private final DataType elementType;
 
-    // The length of the array.
-    private final int length;
-
-    public ArrayType(DataType elementType, int length) {
+    public ArrayType(DataType elementType) {
         this.elementType = elementType;
-        this.length = length;
     }
 }
