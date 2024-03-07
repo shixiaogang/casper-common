@@ -20,10 +20,10 @@ package com.shixiaogang.casper.common.types;
 
 import org.junit.jupiter.api.Test;
 
-import static com.shixiaogang.casper.common.types.DataTypes.FIELD;
-import static com.shixiaogang.casper.common.types.DataTypes.INT;
-import static com.shixiaogang.casper.common.types.DataTypes.LONG;
-import static com.shixiaogang.casper.common.types.DataTypes.ROW;
+import static com.shixiaogang.casper.common.types.DataTypes.field;
+import static com.shixiaogang.casper.common.types.DataTypes.intType;
+import static com.shixiaogang.casper.common.types.DataTypes.longType;
+import static com.shixiaogang.casper.common.types.DataTypes.rowType;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -34,8 +34,10 @@ public class DataTypeTest {
     @Test
     public void testRowInvalid() {
         assertThrows(IllegalArgumentException.class,
-            () -> FIELD("123", INT));
+            () -> field("123", intType()));
         assertThrows(IllegalArgumentException.class,
-            () -> ROW(FIELD("field", INT), FIELD("field", LONG)));
+            () -> rowType(
+                field("field", intType()),
+                field("field", longType())));
     }
 }

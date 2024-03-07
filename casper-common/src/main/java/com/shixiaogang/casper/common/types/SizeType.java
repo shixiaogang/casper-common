@@ -27,6 +27,8 @@ public final class SizeType implements SimpleDataType<Size> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final SizeType INSTANCE = new SizeType();
+
     SizeType() {
     }
 

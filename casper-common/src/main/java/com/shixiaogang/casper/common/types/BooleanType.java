@@ -25,6 +25,8 @@ public final class BooleanType implements DataType {
 
     private static final long serialVersionUID = 1L;
 
+    public static final BooleanType INSTANCE = new BooleanType();
+
     BooleanType() {
     }
 

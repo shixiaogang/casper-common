@@ -27,6 +27,8 @@ public final class StringType implements SimpleDataType<String> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final StringType INSTANCE = new StringType();
+
     StringType() {
     }
 

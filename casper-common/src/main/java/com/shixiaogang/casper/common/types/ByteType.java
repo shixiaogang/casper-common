@@ -25,6 +25,8 @@ public final class ByteType implements SimpleDataType<Byte> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final ByteType INSTANCE = new ByteType();
+
     ByteType() {
     }
 

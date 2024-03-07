@@ -25,6 +25,8 @@ public final class ShortType implements SimpleDataType<Short> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final ShortType INSTANCE = new ShortType();
+
     ShortType() {
     }
 

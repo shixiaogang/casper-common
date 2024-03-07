@@ -25,6 +25,8 @@ public final class FloatType implements SimpleDataType<Float> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final FloatType INSTANCE = new FloatType();
+
     FloatType() {
     }
 

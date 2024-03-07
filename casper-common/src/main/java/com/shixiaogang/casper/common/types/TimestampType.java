@@ -34,6 +34,8 @@ public final class TimestampType implements SimpleDataType<Instant> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final TimestampType INSTANCE = new TimestampType();
+
     TimestampType() {
     }
 

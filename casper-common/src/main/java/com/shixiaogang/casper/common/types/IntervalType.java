@@ -27,6 +27,8 @@ public final class IntervalType implements SimpleDataType<Duration> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final IntervalType INSTANCE = new IntervalType();
+
     IntervalType() {
     }
 

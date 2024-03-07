@@ -28,6 +28,8 @@ public final class CharType implements SimpleDataType<Character> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final CharType INSTANCE = new CharType();
+
     CharType() {
     }
 

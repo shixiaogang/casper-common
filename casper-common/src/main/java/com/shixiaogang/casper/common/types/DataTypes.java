@@ -25,48 +25,87 @@ import java.util.Arrays;
  */
 public class DataTypes {
 
-    //CHECKSTYLE.OFF: MethodName
+    public static BooleanType booleanType() {
+        return BooleanType.INSTANCE;
+    }
 
-    public static final BooleanType BOOLEAN = new BooleanType();
-    public static final ByteType BYTE = new ByteType();
-    public static final CharType CHAR = new CharType();
-    public static final ShortType SHORT = new ShortType();
-    public static final IntType INT = new IntType();
-    public static final LongType LONG = new LongType();
-    public static final FloatType FLOAT = new FloatType();
-    public static final DoubleType DOUBLE = new DoubleType();
-    public static final StringType STRING = new StringType();
-    public static final DateType DATE = new DateType();
-    public static final TimeType TIME = new TimeType();
-    public static final TimestampType TIMESTAMP = new TimestampType();
-    public static final IntervalType INTERVAL = new IntervalType();
-    public static final SizeType SIZE = new SizeType();
+    public static ByteType byteType() {
+        return ByteType.INSTANCE;
+    }
 
-    public static DecimalType DECIMAL(int precision, int scale) {
+    public static CharType charType() {
+        return CharType.INSTANCE;
+    }
+
+    public static ShortType shortType() {
+        return ShortType.INSTANCE;
+    }
+
+    public static IntType intType() {
+        return IntType.INSTANCE;
+    }
+
+    public static LongType longType() {
+        return LongType.INSTANCE;
+    }
+
+    public static FloatType floatType() {
+        return FloatType.INSTANCE;
+    }
+
+    public static DoubleType doubleType() {
+        return DoubleType.INSTANCE;
+    }
+
+    public static DecimalType decimalType(int precision, int scale) {
         return new DecimalType(precision, scale);
     }
 
-    public static <T> EnumType<T> ENUM(Class<T> clazz) {
+    public static StringType stringType() {
+        return StringType.INSTANCE;
+    }
+
+    public static DateType dateType() {
+        return DateType.INSTANCE;
+    }
+
+    public static TimeType timeType() {
+        return TimeType.INSTANCE;
+    }
+
+    public static TimestampType timestampType() {
+        return TimestampType.INSTANCE;
+    }
+
+    public static IntervalType intervalType() {
+        return IntervalType.INSTANCE;
+    }
+
+    public static SizeType sizeType() {
+        return SizeType.INSTANCE;
+    }
+
+    public static <T> EnumType<T> enumType(Class<T> clazz) {
         return new EnumType<>(clazz);
     }
 
-    public static ArrayType ARRAY(DataType elementType) {
+    public static ArrayType arrayType(DataType elementType) {
         return new ArrayType(elementType);
     }
 
-    public static MapType MAP(DataType keyType, DataType valueType) {
+    public static MapType mapType(DataType keyType, DataType valueType) {
         return new MapType(keyType, valueType);
     }
 
-    public static RowFieldType FIELD(String name, DataType type) {
+    public static RowFieldType field(String name, DataType type) {
         return new RowFieldType(name, type);
     }
 
-    public static RowType ROW(RowFieldType... fieldTypes) {
+    public static RowType rowType(RowFieldType... fieldTypes) {
         return new RowType(Arrays.asList(fieldTypes));
     }
 
-    public static RowType ROW(DataType... fieldTypes) {
+    public static RowType rowType(DataType... fieldTypes) {
         RowType.Builder rowTypeBuilder = RowType.builder();
 
         int fieldIndex = 0;
@@ -77,6 +116,4 @@ public class DataTypes {
 
         return rowTypeBuilder.build();
     }
-
-    //CHECKSTYLE.ON: MethodName
 }

@@ -29,6 +29,8 @@ public final class DateType implements SimpleDataType<Instant> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final DateType INSTANCE = new DateType();
+
     DateType() {
     }
 

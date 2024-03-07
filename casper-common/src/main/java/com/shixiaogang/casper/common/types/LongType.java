@@ -25,6 +25,8 @@ public final class LongType implements SimpleDataType<Long> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final LongType INSTANCE = new LongType();
+
     LongType() {
     }
 

@@ -25,6 +25,8 @@ public final class DoubleType implements SimpleDataType<Double> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final DoubleType INSTANCE = new DoubleType();
+
     DoubleType() {
     }
 
