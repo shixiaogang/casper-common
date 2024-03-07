@@ -18,7 +18,7 @@
 
 package com.shixiaogang.casper.common.types;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 /**
  * The data type for timestamp values without a time zone.
@@ -30,7 +30,7 @@ import java.time.Instant;
  * {@code 9999-12-31 23:59:59.999}. Leap seconds (e.g., 0000-01-01 23:59:60) are
  * not supported.</p>
  */
-public final class TimestampType implements SimpleDataType<Instant> {
+public final class TimestampType implements SimpleDataType<LocalDateTime> {
 
     private static final long serialVersionUID = 1L;
 

@@ -18,7 +18,7 @@
 
 package com.shixiaogang.casper.common.types;
 
-import java.time.Instant;
+import java.time.LocalTime;
 
 /**
  * The data type for time values without a time zone.
@@ -29,7 +29,7 @@ import java.time.Instant;
  * <p>The time values ranges from {@code 00:00:00.000} to {@code 23:59:59.999}.
  * Leap seconds (e.g., 23:59:60) are not supported.</p>
  */
-public final class TimeType implements SimpleDataType<Instant> {
+public final class TimeType implements SimpleDataType<LocalTime> {
 
     private static final long serialVersionUID = 1L;
 
